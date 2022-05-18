@@ -1,0 +1,65 @@
+<%- include('../partials/htmlTop.ejs') %>
+
+    <%- include('../partials/nav.ejs') %>
+        <h1>
+            <%= title %>
+        </h1>
+
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia dolor consectetur velit. Qui, distinctio
+            quidem
+            ut repellat eaque nemo mollitia obcaecati minus exercitationem doloremque commodi nisi libero dignissimos
+            expedita adipisci accusantium quo, inventore ullam placeat molestiae, nobis blanditiis! Ab impedit
+            cupiditate
+            veniam omnis quos, optio maiores voluptas atque adipisci fugit saepe aliquam autem earum recusandae, sed
+            officia
+            voluptatem dolorem. Quis odit esse deserunt magni. Culpa quibusdam ipsa iure? Ullam inventore ea eum,
+            ducimus
+            voluptatem natus corporis temporibus veritatis placeat, dolor qui atque, vero necessitatibus officia omnis?
+            Rerum aperiam eum eos fugit? Aperiam distinctio facilis animi cumque ipsam at laboriosam? Cumque
+            perspiciatis
+            quas vel aut, minima ab explicabo voluptatibus deleniti possimus dolor porro natus error. Sed necessitatibus
+        </p>
+
+
+
+        <br>
+
+        <%= new Date().toString() %>
+
+            <br><br>
+
+            <% if(post.published){ %>
+
+                <h1>
+                    <%= post.title %>
+                </h1>
+                <p>
+                    <%= post.des %>
+                </p>
+                <% } else{ %>
+
+                    <h4> Post not published</h4>
+
+
+                    <% } %>
+
+
+                        <br>
+                        <br>
+
+                        <h2> Infoooos</h2>
+
+                        <% if(infos.length>=1){%>
+                            <% for(info of infos){ %>
+                                <h4>
+                                    <%= info.name %>
+                                </h4>
+
+                                <% } %>
+
+                                    <% } %>
+
+
+
+                                        <%- include('../partials/htmlBottom.ejs') %>
